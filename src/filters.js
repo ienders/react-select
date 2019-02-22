@@ -16,7 +16,7 @@ const defaultStringify = option => `${option.label} ${option.value}`;
 export const createFilter = (config: ?Config) => (
   option: { label: string, value: string, data: any },
   rawInput: string
-) => {
+): boolean => {
   if (option.data.__isNew__) {
     return true;
   }
